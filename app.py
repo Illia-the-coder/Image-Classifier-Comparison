@@ -32,14 +32,13 @@ st.set_page_config(page_title="Image Classifier Comparison", page_icon=None, lay
 st.title("Image Classifier Comparison")
 st.sidebar.title("Settings")
 image = st.sidebar.file_uploader("Upload an image", type=["jpg", "jpeg", "png"])
-top_k = st.sidebar.slider("Top k classes", min_value=1, max_value=5, value=5)
 
 if image is not None:
     st.image(image, use_column_width=True)
     image = Image.open(image)
 
     if st.sidebar.button("Classify"):
-        labels = process(image, top_k)
+        labels = process(image, 5)
 
         combined_scores = {}
         label_count = {}
