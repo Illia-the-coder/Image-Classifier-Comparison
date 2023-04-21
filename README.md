@@ -1,6 +1,4 @@
-Here's the README in markdown format as code:
 
-```
 # Image Classifier Comparison
 
 This application allows you to compare the performance of various image classifiers available on the Hugging Face Hub. You can upload an image, and the application will display the top k predictions for each model, along with a bar chart of the mean scores for each label across all models.
@@ -77,4 +75,4 @@ The following image classification models are compared in this application:
 3. Click the "Classify" button to process the image and display the results.
 4. View the bar chart of mean scores for each label.
 5. Download the mean scores data as a CSV file by clicking the "Download data as CSV" button.
-```
+
