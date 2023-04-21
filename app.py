@@ -22,7 +22,7 @@ def process(image_file, top_k):
         labels.append({x["label"]: x["score"] for x in pred[:top_k]})
     return labels
 
-@st.cache_data
+@st.cache
 def convert_df(df):
     # Cache the conversion to prevent computation on every rerun
     return df.to_csv(index=False).encode('utf-8')
